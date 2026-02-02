@@ -221,6 +221,18 @@ body.white{
   --footer-color: #111;
 }
 
+body.lilac {
+  --bg: #260656;
+  --card: #2d1c42;
+  --text: #fff;
+  --button: #4a1985;
+  --button-text: #fff;
+  --box-shadow: #a580ca;
+  --footer: #260656;
+  --footer-color: #fff;
+
+}
+
 /* ===Footer=== */
 
 footer {

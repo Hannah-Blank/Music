@@ -8,7 +8,7 @@ toggleButton.addEventListener("click", () => {
 
 // Theme switching
 const themeButtons = document.querySelectorAll(".menu button");
-const themes = ["white", "dark", "darkblue", "bordeaux"];
+const themes = ["white", "dark", "darkblue", "bordeaux", "lilac"];
 
 themeButtons.forEach(button => {
   button.addEventListener("click", () => {
