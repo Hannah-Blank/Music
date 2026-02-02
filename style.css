@@ -1,0 +1,264 @@
+/* ===== Basic Reset ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Georgia', serif;
+}
+
+/* ===== CSS Variables Default ===== */
+:root {
+  --bg: #f5f5f5;
+  --card: #fff;
+  --text: #111;
+  --button: #111;
+  --button-text: #fff;
+  --box-shadow:#111;
+}
+
+/* ===== Body ===== */
+body {
+  background: var(--bg);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: background 0.3s;
+}
+
+/* ===== Profile Card ===== */
+.card {
+    margin-top: auto;
+    margin-bottom: auto;
+    background: var(--card);
+    color: var(--text);
+    border-radius: 15px;
+    box-shadow: 0 8px 20px var(--box-shadow);
+    padding: 30px;
+    text-align: center;
+    width: 300px;
+    transition: background 0.3s, color 0.3s, transform 0.3s, box-shadow 0.3s;
+    position: relative;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 25px var(--box-shadow);
+}
+
+/* ===== Profile Image ===== */
+.album-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 12px;
+  object-fit: cover;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+
+/* ===== Modal for Image ===== */
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+  z-index: 1000;
+}
+
+.modal:target {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 20px;
+}
+
+.close {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  font-size: 40px;
+  color: white;
+  text-decoration: none;
+}
+
+/* ===== Headings ===== */
+h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+
+/* ===== Social Links ===== */
+.socials {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.social-link {
+  font-size: 24px;
+  color: var(--text);
+  transition: color 0.3s, transform 0.3s;
+}
+
+.social-link:hover {
+  transform: scale(1.2);
+}
+
+/* ===== Navbar ===== */
+.navbar {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 2000;
+}
+
+/* Hamburger button */
+.menu-toggle {
+  font-size: 26px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--text);
+}
+
+/* Hidden menu */
+.menu {
+  list-style: none;
+  margin-top: 10px;
+  padding: 10px;
+  background: var(--card);
+  border-radius: 12px;
+  box-shadow: 0 8px 20px var(--box-shadow);
+
+  display: none;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Show menu when active */
+.menu.open {
+  display: flex;
+}
+
+/* Menu buttons */
+.menu button {
+  background: var(--button);
+  color: var(--button-text);
+  border: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: left;
+  transition: transform 0.2s;
+}
+
+.menu button:hover {
+  transform: scale(1.05);
+}
+
+/* Active button highlight */
+.theme-nav button.active {
+  transform: scale(1.1);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* ===== Themes ===== */
+body.dark {
+  --bg: #111;
+  --card: #1c1c1c;
+  --text: #f5f5f5;
+  --button: #f5f5f5;
+  --button-text: #111;
+  --box-shadow: #fff;
+  --footer: #111;
+  --footer-color: #fff;
+
+}
+
+body.darkblue {
+  --bg: #002147;
+  --card: #1c2e4a;
+  --text: #f5f5f5;
+  --button: #52677d;
+  --button-text: #111;
+  --box-shadow: #7b00ff;
+  --footer: #002147;
+  --footer-color: #fff;
+}
+
+body.bordeaux {
+  --bg: #5c0120;
+  --card: #3f070b;
+  --text: #f5f5f5;
+  --button: #4a0404;
+  --button-text: #fff;
+  --box-shadow: #111;
+  --footer: #5c0120;
+  --footer-color: #fff;
+}
+
+body.white{
+  --bg: #f5f5f5;
+  --card: #fff;
+  --text: #111;
+  --button: #111;
+  --button-text: #fff;
+  --box-shadow:#111;
+  --footer: #f5f5f5;
+  --footer-color: #111;
+}
+
+/* ===Footer=== */
+
+footer {
+  margin-top: auto;
+  width: 100%;
+  background-color: var(--footer);
+  color: var(--footer-color);
+  padding: 20px;
+  text-align: center;
+}
+
+
+.footer-content {
+  display: flex;
+  justify-content: space-around; 
+  flex-wrap: wrap; 
+  padding: 10px;
+}
+.play-btn {
+  background: var(--button);
+  color: var(--button-text);
+  border: none;
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.play-btn:hover {
+  transform: scale(1.1);
+}
+.mood {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  margin-bottom: 10px;
+  background: var(--button);
+  color: var(--button-text);
+}

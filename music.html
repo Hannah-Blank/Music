@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Music Card</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    </head>
+    <body>
+        <div class="card">
+            <div class="card-header">
+                <a href="#img-modal">
+                    <img src="Metallica.jpg" alt="'The Black Album' by Metallica" class="album-img">
+                </a>
+                <div id="img-modal" class="modal">
+                    <a href="#" class="close">&times;</a>
+                    <img src="Metallica.jpg" alt="Cover-big">
+                </div>
+                <nav class="navbar">
+                    <!-- Hamburger Button -->
+                     <button class="menu-toggle" aria-label="Open menu">&#9776;</button>
+                     <!-- Hidden Menu -->
+                      <ul class="menu">
+                        <li><button data-theme="white">White</button></li>
+                        <li><button data-theme="dark">Dark</button></li>
+                        <li><button data-theme="darkblue">Dark Blue</button></li>
+                        <li><button data-theme="bordeaux">Bordeaux</button></li>
+                    </ul>
+                </nav>
+            </div>
+            <h3 id="Name">"Enter Sandmann"- Metallica</h3>
+            <span class="mood">Metal • Dark</span>
+            <button class="play-btn">
+                <i class="fa-solid fa-play"></i>
+            </button>
+
+        </div>
+        <script src="script.js"></script>
+    </body>
+    <footer>
+        <div class="socials">
+            <a href="https://www.instagram.com/hanna.h122010/" class="social-link"><i class="fa-brands fa-instagram"></i></a> 
+            <a href="https://github.com/Hannah-Blank" class="social-link"><i class="fa-brands fa-github"></i></a>
+        </div>
+    </footer>
+</html>
